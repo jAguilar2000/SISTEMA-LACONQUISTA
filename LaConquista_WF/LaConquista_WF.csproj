@@ -46,88 +46,115 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgregarCliente.cs">
+    <Compile Include="Formularios\Clientes\AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarCliente.Designer.cs">
+    <Compile Include="Formularios\Clientes\AgregarCliente.Designer.cs">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarProducto.cs">
+    <Compile Include="Formularios\Factura\ModalCobrar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarProducto.Designer.cs">
+    <Compile Include="Formularios\Factura\ModalCobrar.Designer.cs">
+      <DependentUpon>ModalCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Inventario\AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Inventario\AgregarProducto.Designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarUsuarios.cs">
+    <Compile Include="Formularios\Configuracion\AgregarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AgregarUsuarios.Designer.cs">
+    <Compile Include="Formularios\Configuracion\AgregarUsuarios.Designer.cs">
       <DependentUpon>AgregarUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="IngresarFactura.cs">
+    <Compile Include="Formularios\Factura\IngresarFactura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IngresarFactura.Designer.cs">
+    <Compile Include="Formularios\Factura\IngresarFactura.Designer.cs">
       <DependentUpon>IngresarFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoCliente.cs">
+    <Compile Include="Formularios\Clientes\ListadoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoCliente.Designer.cs">
+    <Compile Include="Formularios\Clientes\ListadoCliente.Designer.cs">
       <DependentUpon>ListadoCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoProducto.cs">
+    <Compile Include="Formularios\Inventario\ListadoProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoProducto.Designer.cs">
+    <Compile Include="Formularios\Inventario\ListadoProducto.Designer.cs">
       <DependentUpon>ListadoProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoUsuarios.cs">
+    <Compile Include="Formularios\Configuracion\ListadoUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoUsuarios.Designer.cs">
+    <Compile Include="Formularios\Configuracion\ListadoUsuarios.Designer.cs">
       <DependentUpon>ListadoUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Formularios\Configuracion\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Formularios\Configuracion\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu.cs">
+    <Compile Include="Formularios\Configuracion\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
+    <Compile Include="Formularios\Configuracion\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Proveedores\AgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Proveedores\AgregarProveedor.Designer.cs">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Proveedores\ListadoDeProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Proveedores\ListadoDeProveedores.Designer.cs">
+      <DependentUpon>ListadoDeProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AgregarCliente.resx">
+    <EmbeddedResource Include="Formularios\Clientes\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarProducto.resx">
+    <EmbeddedResource Include="Formularios\Factura\ModalCobrar.resx">
+      <DependentUpon>ModalCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Inventario\AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarUsuarios.resx">
+    <EmbeddedResource Include="Formularios\Configuracion\AgregarUsuarios.resx">
       <DependentUpon>AgregarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IngresarFactura.resx">
+    <EmbeddedResource Include="Formularios\Factura\IngresarFactura.resx">
       <DependentUpon>IngresarFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListadoCliente.resx">
+    <EmbeddedResource Include="Formularios\Clientes\ListadoCliente.resx">
       <DependentUpon>ListadoCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListadoProducto.resx">
+    <EmbeddedResource Include="Formularios\Inventario\ListadoProducto.resx">
       <DependentUpon>ListadoProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListadoUsuarios.resx">
+    <EmbeddedResource Include="Formularios\Configuracion\ListadoUsuarios.resx">
       <DependentUpon>ListadoUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Formularios\Configuracion\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Formularios\Configuracion\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Proveedores\AgregarProveedor.resx">
+      <DependentUpon>AgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Proveedores\ListadoDeProveedores.resx">
+      <DependentUpon>ListadoDeProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
