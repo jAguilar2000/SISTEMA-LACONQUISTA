@@ -49,6 +49,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // TELEFONO
@@ -127,7 +129,7 @@
             this.BTNINGRESARPRODUCTO.Name = "BTNINGRESARPRODUCTO";
             this.BTNINGRESARPRODUCTO.Size = new System.Drawing.Size(100, 32);
             this.BTNINGRESARPRODUCTO.TabIndex = 22;
-            this.BTNINGRESARPRODUCTO.Text = "INGRESAR";
+            this.BTNINGRESARPRODUCTO.Text = "GUARDAR";
             this.BTNINGRESARPRODUCTO.UseVisualStyleBackColor = false;
             // 
             // BTNSALIRPRODUCTO
@@ -139,14 +141,15 @@
             this.BTNSALIRPRODUCTO.Name = "BTNSALIRPRODUCTO";
             this.BTNSALIRPRODUCTO.Size = new System.Drawing.Size(100, 32);
             this.BTNSALIRPRODUCTO.TabIndex = 21;
-            this.BTNSALIRPRODUCTO.Text = "SALIR";
+            this.BTNSALIRPRODUCTO.Text = "CANCELAR";
             this.BTNSALIRPRODUCTO.UseVisualStyleBackColor = false;
+            this.BTNSALIRPRODUCTO.Click += new System.EventHandler(this.BTNSALIRPRODUCTO_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(126, 9);
+            this.label1.Location = new System.Drawing.Point(74, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(194, 20);
             this.label1.TabIndex = 20;
@@ -254,12 +257,35 @@
             this.comboBox1.Size = new System.Drawing.Size(150, 21);
             this.comboBox1.TabIndex = 41;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(306, 16);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(56, 13);
+            this.linkLabel1.TabIndex = 42;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "[Regresar]";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(362, 16);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(76, 13);
+            this.linkLabel2.TabIndex = 43;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "[Cerrar Sesión]";
+            // 
             // AgregarProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(402, 473);
+            this.ClientSize = new System.Drawing.Size(446, 473);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -283,6 +309,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregarProducto";
             this.Text = "AgregarProducto";
+            this.Load += new System.EventHandler(this.AgregarProducto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,5 +337,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

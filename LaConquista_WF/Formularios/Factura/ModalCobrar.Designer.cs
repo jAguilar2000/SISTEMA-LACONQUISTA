@@ -102,6 +102,7 @@
             this.BTNSALIRUSUARIO.TabIndex = 29;
             this.BTNSALIRUSUARIO.Text = "SALIR";
             this.BTNSALIRUSUARIO.UseVisualStyleBackColor = false;
+            this.BTNSALIRUSUARIO.Click += new System.EventHandler(this.BTNSALIRUSUARIO_Click);
             // 
             // Nombre_cliente
             // 

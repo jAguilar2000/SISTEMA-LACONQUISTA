@@ -21,5 +21,31 @@ namespace LaConquista_WF
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AgregarCliente agregarCliente = new AgregarCliente();
+            agregarCliente.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AgregarCliente agregarCliente = new AgregarCliente();
+            agregarCliente.Show();
+            this.Hide();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
     }
 }

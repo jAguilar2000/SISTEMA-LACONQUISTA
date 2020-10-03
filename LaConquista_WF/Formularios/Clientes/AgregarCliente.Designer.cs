@@ -41,13 +41,15 @@
             this.TXTIDENTIDAD = new System.Windows.Forms.TextBox();
             this.EMAIL = new System.Windows.Forms.Label();
             this.TXTEMAIL = new System.Windows.Forms.TextBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 9);
+            this.label1.Location = new System.Drawing.Point(82, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 20);
             this.label1.TabIndex = 3;
@@ -101,8 +103,9 @@
             this.BTNINGRESARCLIENTE.Name = "BTNINGRESARCLIENTE";
             this.BTNINGRESARCLIENTE.Size = new System.Drawing.Size(100, 32);
             this.BTNINGRESARCLIENTE.TabIndex = 9;
-            this.BTNINGRESARCLIENTE.Text = "INGRESAR";
+            this.BTNINGRESARCLIENTE.Text = "GUARDAR";
             this.BTNINGRESARCLIENTE.UseVisualStyleBackColor = false;
+            this.BTNINGRESARCLIENTE.Click += new System.EventHandler(this.BTNINGRESARCLIENTE_Click);
             // 
             // BTNSALIRCLIENTE
             // 
@@ -113,8 +116,9 @@
             this.BTNSALIRCLIENTE.Name = "BTNSALIRCLIENTE";
             this.BTNSALIRCLIENTE.Size = new System.Drawing.Size(100, 32);
             this.BTNSALIRCLIENTE.TabIndex = 8;
-            this.BTNSALIRCLIENTE.Text = "SALIR";
+            this.BTNSALIRCLIENTE.Text = "CANCELAR";
             this.BTNSALIRCLIENTE.UseVisualStyleBackColor = false;
+            this.BTNSALIRCLIENTE.Click += new System.EventHandler(this.BTNSALIRCLIENTE_Click);
             // 
             // TELEFONO
             // 
@@ -174,12 +178,35 @@
             this.TXTEMAIL.Size = new System.Drawing.Size(150, 28);
             this.TXTEMAIL.TabIndex = 18;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(295, 13);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(56, 13);
+            this.linkLabel1.TabIndex = 20;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "[Regresar]";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(358, 13);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(76, 13);
+            this.linkLabel2.TabIndex = 21;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "[Cerrar Sesión]";
+            // 
             // AgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(372, 329);
+            this.ClientSize = new System.Drawing.Size(443, 329);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.EMAIL);
             this.Controls.Add(this.TXTEMAIL);
             this.Controls.Add(this.TELEFONO);
@@ -215,5 +242,7 @@
         private System.Windows.Forms.TextBox TXTIDENTIDAD;
         private System.Windows.Forms.Label EMAIL;
         private System.Windows.Forms.TextBox TXTEMAIL;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }

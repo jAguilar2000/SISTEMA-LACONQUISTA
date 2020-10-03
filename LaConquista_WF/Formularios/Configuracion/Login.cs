@@ -24,7 +24,7 @@ namespace LaConquista_WF
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,6 +35,13 @@ namespace LaConquista_WF
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
         }
     }
 }

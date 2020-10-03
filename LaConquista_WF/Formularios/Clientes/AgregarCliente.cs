@@ -26,5 +26,24 @@ namespace LaConquista_WF
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ListadoCliente listadoCliente = new ListadoCliente();
+            listadoCliente.Show();
+            this.Close();
+        }
+
+        private void BTNINGRESARCLIENTE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTNSALIRCLIENTE_Click(object sender, EventArgs e)
+        {
+            ListadoCliente listadoCliente = new ListadoCliente();
+            listadoCliente.Show();
+            this.Close();
+        }
     }
 }

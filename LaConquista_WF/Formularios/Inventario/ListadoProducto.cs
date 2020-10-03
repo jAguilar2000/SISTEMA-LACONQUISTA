@@ -16,5 +16,26 @@ namespace LaConquista_WF
         {
             InitializeComponent();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
+
+        private void btbINGRESARPRODUCTO_Click(object sender, EventArgs e)
+        {
+            AgregarProducto agregarProducto = new AgregarProducto();
+            agregarProducto.Show();
+            this.Close();
+        }
+
+        private void BTNSALIRPRODUCTO_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Close();
+        }
     }
 }

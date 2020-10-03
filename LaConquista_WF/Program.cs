@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LaConquista_WF.Formularios.Configuracion;
 
 namespace LaConquista_WF
 {
@@ -16,7 +17,7 @@ namespace LaConquista_WF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Carga());
         }
     }
 }

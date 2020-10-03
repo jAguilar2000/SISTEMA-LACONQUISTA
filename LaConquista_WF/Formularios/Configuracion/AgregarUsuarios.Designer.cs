@@ -171,6 +171,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregarUsuarios";
             this.Text = "AgregarUsuarios";
+            this.Load += new System.EventHandler(this.AgregarUsuarios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

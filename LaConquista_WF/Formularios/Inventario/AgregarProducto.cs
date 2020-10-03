@@ -21,5 +21,24 @@ namespace LaConquista_WF
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ListadoProducto listadoProducto = new ListadoProducto();
+            listadoProducto.Show();
+            this.Close();
+        }
+
+        private void BTNSALIRPRODUCTO_Click(object sender, EventArgs e)
+        {
+            ListadoProducto listadoProducto = new ListadoProducto();
+            listadoProducto.Show();
+            this.Close();
+        }
+
+        private void AgregarProducto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

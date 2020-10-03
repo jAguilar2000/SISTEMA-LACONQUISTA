@@ -21,5 +21,10 @@ namespace LaConquista_WF
         {
 
         }
+
+        private void AgregarUsuarios_Load(object sender, EventArgs e)
+        { 
+
+        }
     }
 }
