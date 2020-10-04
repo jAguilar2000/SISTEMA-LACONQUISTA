@@ -17,7 +17,7 @@ namespace LaConquista_WF
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Carga());
+            Application.Run(new AgregarCliente());
         }
     }
 }

@@ -31,16 +31,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Apellido_cliente = new System.Windows.Forms.Label();
             this.Nombre_cliente = new System.Windows.Forms.Label();
-            this.TXT_APELLIDO = new System.Windows.Forms.TextBox();
-            this.TXT_NOMBRE = new System.Windows.Forms.TextBox();
-            this.BTNINGRESARCLIENTE = new System.Windows.Forms.Button();
-            this.BTNSALIRCLIENTE = new System.Windows.Forms.Button();
+            this.txt_Apellido = new System.Windows.Forms.TextBox();
+            this.txt_Nombre = new System.Windows.Forms.TextBox();
+            this.btn_GuardarCliente = new System.Windows.Forms.Button();
+            this.btn_Cancelar = new System.Windows.Forms.Button();
             this.TELEFONO = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TXTTELEFONO = new System.Windows.Forms.TextBox();
-            this.TXTIDENTIDAD = new System.Windows.Forms.TextBox();
+            this.txt_Telefono = new System.Windows.Forms.TextBox();
+            this.txt_Identificacion = new System.Windows.Forms.TextBox();
             this.EMAIL = new System.Windows.Forms.Label();
-            this.TXTEMAIL = new System.Windows.Forms.TextBox();
+            this.txt_Correo = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
@@ -76,49 +76,49 @@
             this.Nombre_cliente.Text = "NOMBRE";
             this.Nombre_cliente.Click += new System.EventHandler(this.Usuario_Click);
             // 
-            // TXT_APELLIDO
+            // txt_Apellido
             // 
-            this.TXT_APELLIDO.BackColor = System.Drawing.SystemColors.Info;
-            this.TXT_APELLIDO.Location = new System.Drawing.Point(134, 97);
-            this.TXT_APELLIDO.Multiline = true;
-            this.TXT_APELLIDO.Name = "TXT_APELLIDO";
-            this.TXT_APELLIDO.Size = new System.Drawing.Size(150, 28);
-            this.TXT_APELLIDO.TabIndex = 11;
+            this.txt_Apellido.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Apellido.Location = new System.Drawing.Point(134, 97);
+            this.txt_Apellido.Multiline = true;
+            this.txt_Apellido.Name = "txt_Apellido";
+            this.txt_Apellido.Size = new System.Drawing.Size(150, 28);
+            this.txt_Apellido.TabIndex = 11;
             // 
-            // TXT_NOMBRE
+            // txt_Nombre
             // 
-            this.TXT_NOMBRE.BackColor = System.Drawing.SystemColors.Info;
-            this.TXT_NOMBRE.Location = new System.Drawing.Point(134, 52);
-            this.TXT_NOMBRE.Multiline = true;
-            this.TXT_NOMBRE.Name = "TXT_NOMBRE";
-            this.TXT_NOMBRE.Size = new System.Drawing.Size(150, 28);
-            this.TXT_NOMBRE.TabIndex = 10;
+            this.txt_Nombre.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Nombre.Location = new System.Drawing.Point(134, 52);
+            this.txt_Nombre.Multiline = true;
+            this.txt_Nombre.Name = "txt_Nombre";
+            this.txt_Nombre.Size = new System.Drawing.Size(150, 28);
+            this.txt_Nombre.TabIndex = 10;
             // 
-            // BTNINGRESARCLIENTE
+            // btn_GuardarCliente
             // 
-            this.BTNINGRESARCLIENTE.BackColor = System.Drawing.Color.Black;
-            this.BTNINGRESARCLIENTE.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNINGRESARCLIENTE.ForeColor = System.Drawing.Color.White;
-            this.BTNINGRESARCLIENTE.Location = new System.Drawing.Point(73, 285);
-            this.BTNINGRESARCLIENTE.Name = "BTNINGRESARCLIENTE";
-            this.BTNINGRESARCLIENTE.Size = new System.Drawing.Size(100, 32);
-            this.BTNINGRESARCLIENTE.TabIndex = 9;
-            this.BTNINGRESARCLIENTE.Text = "GUARDAR";
-            this.BTNINGRESARCLIENTE.UseVisualStyleBackColor = false;
-            this.BTNINGRESARCLIENTE.Click += new System.EventHandler(this.BTNINGRESARCLIENTE_Click);
+            this.btn_GuardarCliente.BackColor = System.Drawing.Color.Black;
+            this.btn_GuardarCliente.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GuardarCliente.ForeColor = System.Drawing.Color.White;
+            this.btn_GuardarCliente.Location = new System.Drawing.Point(73, 285);
+            this.btn_GuardarCliente.Name = "btn_GuardarCliente";
+            this.btn_GuardarCliente.Size = new System.Drawing.Size(100, 32);
+            this.btn_GuardarCliente.TabIndex = 9;
+            this.btn_GuardarCliente.Text = "GUARDAR";
+            this.btn_GuardarCliente.UseVisualStyleBackColor = false;
+            this.btn_GuardarCliente.Click += new System.EventHandler(this.BTNINGRESARCLIENTE_Click);
             // 
-            // BTNSALIRCLIENTE
+            // btn_Cancelar
             // 
-            this.BTNSALIRCLIENTE.BackColor = System.Drawing.Color.Black;
-            this.BTNSALIRCLIENTE.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTNSALIRCLIENTE.ForeColor = System.Drawing.Color.White;
-            this.BTNSALIRCLIENTE.Location = new System.Drawing.Point(236, 285);
-            this.BTNSALIRCLIENTE.Name = "BTNSALIRCLIENTE";
-            this.BTNSALIRCLIENTE.Size = new System.Drawing.Size(100, 32);
-            this.BTNSALIRCLIENTE.TabIndex = 8;
-            this.BTNSALIRCLIENTE.Text = "CANCELAR";
-            this.BTNSALIRCLIENTE.UseVisualStyleBackColor = false;
-            this.BTNSALIRCLIENTE.Click += new System.EventHandler(this.BTNSALIRCLIENTE_Click);
+            this.btn_Cancelar.BackColor = System.Drawing.Color.Black;
+            this.btn_Cancelar.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.ForeColor = System.Drawing.Color.White;
+            this.btn_Cancelar.Location = new System.Drawing.Point(236, 285);
+            this.btn_Cancelar.Name = "btn_Cancelar";
+            this.btn_Cancelar.Size = new System.Drawing.Size(100, 32);
+            this.btn_Cancelar.TabIndex = 8;
+            this.btn_Cancelar.Text = "CANCELAR";
+            this.btn_Cancelar.UseVisualStyleBackColor = false;
+            this.btn_Cancelar.Click += new System.EventHandler(this.BTNSALIRCLIENTE_Click);
             // 
             // TELEFONO
             // 
@@ -141,23 +141,23 @@
             this.label3.Text = "IDENTIDAD/RTN";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // TXTTELEFONO
+            // txt_Telefono
             // 
-            this.TXTTELEFONO.BackColor = System.Drawing.SystemColors.Info;
-            this.TXTTELEFONO.Location = new System.Drawing.Point(134, 184);
-            this.TXTTELEFONO.Multiline = true;
-            this.TXTTELEFONO.Name = "TXTTELEFONO";
-            this.TXTTELEFONO.Size = new System.Drawing.Size(150, 28);
-            this.TXTTELEFONO.TabIndex = 15;
+            this.txt_Telefono.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Telefono.Location = new System.Drawing.Point(134, 184);
+            this.txt_Telefono.Multiline = true;
+            this.txt_Telefono.Name = "txt_Telefono";
+            this.txt_Telefono.Size = new System.Drawing.Size(150, 28);
+            this.txt_Telefono.TabIndex = 15;
             // 
-            // TXTIDENTIDAD
+            // txt_Identificacion
             // 
-            this.TXTIDENTIDAD.BackColor = System.Drawing.SystemColors.Info;
-            this.TXTIDENTIDAD.Location = new System.Drawing.Point(134, 139);
-            this.TXTIDENTIDAD.Multiline = true;
-            this.TXTIDENTIDAD.Name = "TXTIDENTIDAD";
-            this.TXTIDENTIDAD.Size = new System.Drawing.Size(150, 28);
-            this.TXTIDENTIDAD.TabIndex = 14;
+            this.txt_Identificacion.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Identificacion.Location = new System.Drawing.Point(134, 139);
+            this.txt_Identificacion.Multiline = true;
+            this.txt_Identificacion.Name = "txt_Identificacion";
+            this.txt_Identificacion.Size = new System.Drawing.Size(150, 28);
+            this.txt_Identificacion.TabIndex = 14;
             // 
             // EMAIL
             // 
@@ -169,14 +169,14 @@
             this.EMAIL.TabIndex = 19;
             this.EMAIL.Text = "CORREO";
             // 
-            // TXTEMAIL
+            // txt_Correo
             // 
-            this.TXTEMAIL.BackColor = System.Drawing.SystemColors.Info;
-            this.TXTEMAIL.Location = new System.Drawing.Point(134, 231);
-            this.TXTEMAIL.Multiline = true;
-            this.TXTEMAIL.Name = "TXTEMAIL";
-            this.TXTEMAIL.Size = new System.Drawing.Size(150, 28);
-            this.TXTEMAIL.TabIndex = 18;
+            this.txt_Correo.BackColor = System.Drawing.SystemColors.Info;
+            this.txt_Correo.Location = new System.Drawing.Point(134, 231);
+            this.txt_Correo.Multiline = true;
+            this.txt_Correo.Name = "txt_Correo";
+            this.txt_Correo.Size = new System.Drawing.Size(150, 28);
+            this.txt_Correo.TabIndex = 18;
             // 
             // linkLabel1
             // 
@@ -208,17 +208,17 @@
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.EMAIL);
-            this.Controls.Add(this.TXTEMAIL);
+            this.Controls.Add(this.txt_Correo);
             this.Controls.Add(this.TELEFONO);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TXTTELEFONO);
-            this.Controls.Add(this.TXTIDENTIDAD);
+            this.Controls.Add(this.txt_Telefono);
+            this.Controls.Add(this.txt_Identificacion);
             this.Controls.Add(this.Apellido_cliente);
             this.Controls.Add(this.Nombre_cliente);
-            this.Controls.Add(this.TXT_APELLIDO);
-            this.Controls.Add(this.TXT_NOMBRE);
-            this.Controls.Add(this.BTNINGRESARCLIENTE);
-            this.Controls.Add(this.BTNSALIRCLIENTE);
+            this.Controls.Add(this.txt_Apellido);
+            this.Controls.Add(this.txt_Nombre);
+            this.Controls.Add(this.btn_GuardarCliente);
+            this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.label1);
             this.Name = "AgregarCliente";
             this.Text = "AgregarCliente";
@@ -232,16 +232,16 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Apellido_cliente;
         private System.Windows.Forms.Label Nombre_cliente;
-        private System.Windows.Forms.TextBox TXT_APELLIDO;
-        private System.Windows.Forms.TextBox TXT_NOMBRE;
-        private System.Windows.Forms.Button BTNINGRESARCLIENTE;
-        private System.Windows.Forms.Button BTNSALIRCLIENTE;
+        private System.Windows.Forms.TextBox txt_Apellido;
+        private System.Windows.Forms.TextBox txt_Nombre;
+        private System.Windows.Forms.Button btn_GuardarCliente;
+        private System.Windows.Forms.Button btn_Cancelar;
         private System.Windows.Forms.Label TELEFONO;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TXTTELEFONO;
-        private System.Windows.Forms.TextBox TXTIDENTIDAD;
+        private System.Windows.Forms.TextBox txt_Telefono;
+        private System.Windows.Forms.TextBox txt_Identificacion;
         private System.Windows.Forms.Label EMAIL;
-        private System.Windows.Forms.TextBox TXTEMAIL;
+        private System.Windows.Forms.TextBox txt_Correo;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
     }

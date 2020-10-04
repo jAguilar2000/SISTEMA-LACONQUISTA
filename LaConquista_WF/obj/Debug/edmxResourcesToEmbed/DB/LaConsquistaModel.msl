@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SistemaLaConquistaModelStoreContainer" CdmEntityContainer="SistemaLaConquistaEntities">
+    <EntitySetMapping Name="tbCatalogoProductos">
+      <EntityTypeMapping TypeName="SistemaLaConquistaModel.tbCatalogoProductos">
+        <MappingFragment StoreEntitySet="tbCatalogoProductos">
+          <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
+          <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+          <ScalarProperty Name="FechaCrea" ColumnName="FechaCrea" />
+          <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+          <ScalarProperty Name="cprod_Estado" ColumnName="cprod_Estado" />
+          <ScalarProperty Name="prove_IdProveedor" ColumnName="prove_IdProveedor" />
+          <ScalarProperty Name="cprod_Descripcion" ColumnName="cprod_Descripcion" />
+          <ScalarProperty Name="cprod_Id" ColumnName="cprod_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbCliente">
+      <EntityTypeMapping TypeName="SistemaLaConquistaModel.tbCliente">
+        <MappingFragment StoreEntitySet="tbCliente">
+          <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
+          <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+          <ScalarProperty Name="FechaCrea" ColumnName="FechaCrea" />
+          <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+          <ScalarProperty Name="clint_Estado" ColumnName="clint_Estado" />
+          <ScalarProperty Name="clint_Correo" ColumnName="clint_Correo" />
+          <ScalarProperty Name="clint_Direccion" ColumnName="clint_Direccion" />
+          <ScalarProperty Name="clint_Telefono" ColumnName="clint_Telefono" />
+          <ScalarProperty Name="clint_Identificacion" ColumnName="clint_Identificacion" />
+          <ScalarProperty Name="clint_Apellido" ColumnName="clint_Apellido" />
+          <ScalarProperty Name="clint_Nombre" ColumnName="clint_Nombre" />
+          <ScalarProperty Name="clint_IdCliente" ColumnName="clint_IdCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbDetalleFactura">
+      <EntityTypeMapping TypeName="SistemaLaConquistaModel.tbDetalleFactura">
+        <MappingFragment StoreEntitySet="tbDetalleFactura">
+          <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
+          <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+          <ScalarProperty Name="FechaCrea" ColumnName="FechaCrea" />
+          <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+          <ScalarProperty Name="defact_Estado" ColumnName="defact_Estado" />
+          <ScalarProperty Name="defact_Total" ColumnName="defact_Total" />
+          <ScalarProperty Name="defact_Descuento" ColumnName="defact_Descuento" />
+          <ScalarProperty Name="defact_Isv" ColumnName="defact_Isv" />
+          <ScalarProperty Name="defact_Subtotal" ColumnName="defact_Subtotal" />
+          <ScalarProperty Name="defact_PrecioProducto" ColumnName="defact_PrecioProducto" />
+          <ScalarProperty Name="defact_CantidadProducto" ColumnName="defact_CantidadProducto" />
+          <ScalarProperty Name="defact_DescripcionProducto" ColumnName="defact_DescripcionProducto" />
+          <ScalarProperty Name="produ_IdProducto" ColumnName="produ_IdProducto" />
+          <ScalarProperty Name="fact_Id" ColumnName="fact_Id" />
+          <ScalarProperty Name="dtfact_Id" ColumnName="dtfact_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbEncabezadoFactura">
+      <EntityTypeMapping TypeName="SistemaLaConquistaModel.tbEncabezadoFactura">
+        <MappingFragment StoreEntitySet="tbEncabezadoFactura">
+          <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
+          <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+          <ScalarProperty Name="FechaCrea" ColumnName="FechaCrea" />
+          <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+          <ScalarProperty Name="efact_Estado" ColumnName="efact_Estado" />
+          <ScalarProperty Name="efact_Total" ColumnName="efact_Total" />
+          <ScalarProperty Name="efact_Descuento" ColumnName="efact_Descuento" />
+          <ScalarProperty Name="efact_Isv" ColumnName="efact_Isv" />
+          <ScalarProperty Name="efact_Subtotal" ColumnName="efact_Subtotal" />
+          <ScalarProperty Name="efact_FechaFacturacion" ColumnName="efact_FechaFacturacion" />
+          <ScalarProperty Name="efact_CodigoFactura" ColumnName="efact_CodigoFactura" />
+          <ScalarProperty Name="clint_IdCliente" ColumnName="clint_IdCliente" />
+          <ScalarProperty Name="fact_Id" ColumnName="fact_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbProducto">
+      <EntityTypeMapping TypeName="SistemaLaConquistaModel.tbProducto">
+        <MappingFragment StoreEntitySet="tbProducto">
+          <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
+          <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+          <ScalarProperty Name="FechaCrea" ColumnName="FechaCrea" />
+          <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+          <ScalarProperty Name="produ_Estado" ColumnName="produ_Estado" />
+          <ScalarProperty Name="produ_FormatoImagen" ColumnName="produ_FormatoImagen" />
+          <ScalarProperty Name="produ_Imagen" ColumnName="produ_Imagen" />
+          <ScalarProperty Name="produ_Categoria" ColumnName="produ_Categoria" />
+          <ScalarProperty Name="produ_Cantidad" ColumnName="produ_Cantidad" />
+          <ScalarProperty Name="produ_PrecioVenta" ColumnName="produ_PrecioVenta" />
+          <ScalarProperty Name="produ_PrecioCompra" ColumnName="produ_PrecioCompra" />
+          <ScalarProperty Name="produ_Descripcion" ColumnName="produ_Descripcion" />
+          <ScalarProperty Name="produ_Codigo" ColumnName="produ_Codigo" />
+          <ScalarProperty Name="prove_IdProveedor" ColumnName="prove_IdProveedor" />
+          <ScalarProperty Name="cprod_Id" ColumnName="cprod_Id" />
+          <ScalarProperty Name="produ_IdProducto" ColumnName="produ_IdProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbProveedor">
+      <EntityTypeMapping TypeName="SistemaLaConquistaModel.tbProveedor">
+        <MappingFragment StoreEntitySet="tbProveedor">
+          <ScalarProperty Name="FechaModifica" ColumnName="FechaModifica" />
+          <ScalarProperty Name="UsuarioModifica" ColumnName="UsuarioModifica" />
+          <ScalarProperty Name="FechaCrea" ColumnName="FechaCrea" />
+          <ScalarProperty Name="UsuarioCrea" ColumnName="UsuarioCrea" />
+          <ScalarProperty Name="provee_Correo" ColumnName="provee_Correo" />
+          <ScalarProperty Name="provee_Estado" ColumnName="provee_Estado" />
+          <ScalarProperty Name="provee_Contacto" ColumnName="provee_Contacto" />
+          <ScalarProperty Name="prove_Identificacion" ColumnName="prove_Identificacion" />
+          <ScalarProperty Name="prove_Apellido" ColumnName="prove_Apellido" />
+          <ScalarProperty Name="prove_Nombre" ColumnName="prove_Nombre" />
+          <ScalarProperty Name="prove_IdProveedor" ColumnName="prove_IdProveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuario">
+      <EntityTypeMapping TypeName="SistemaLaConquistaModel.tbUsuario">
+        <MappingFragment StoreEntitySet="tbUsuario">
+          <ScalarProperty Name="user_FechaCreacion" ColumnName="user_FechaCreacion" />
+          <ScalarProperty Name="user_Estado" ColumnName="user_Estado" />
+          <ScalarProperty Name="user_Contraseña" ColumnName="user_Contraseña" />
+          <ScalarProperty Name="user_NombreUsuario" ColumnName="user_NombreUsuario" />
+          <ScalarProperty Name="user_Apellido" ColumnName="user_Apellido" />
+          <ScalarProperty Name="user_Nombre" ColumnName="user_Nombre" />
+          <ScalarProperty Name="user_IdUsuario" ColumnName="user_IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

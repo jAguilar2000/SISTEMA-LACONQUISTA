@@ -52,8 +52,17 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,6 +74,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\LaConsquistaModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaConsquistaModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\LaConsquistaModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaConsquistaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\LaConsquistaModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LaConsquistaModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\tbCatalogoProductos.cs">
+      <DependentUpon>LaConsquistaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\tbCliente.cs">
+      <DependentUpon>LaConsquistaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\tbDetalleFactura.cs">
+      <DependentUpon>LaConsquistaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\tbEncabezadoFactura.cs">
+      <DependentUpon>LaConsquistaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\tbProducto.cs">
+      <DependentUpon>LaConsquistaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\tbProveedor.cs">
+      <DependentUpon>LaConsquistaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\tbUsuario.cs">
+      <DependentUpon>LaConsquistaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Clientes\AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +234,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="DB\LaConsquistaModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LaConsquistaModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB\LaConsquistaModel.edmx.diagram">
+      <DependentUpon>LaConsquistaModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -211,6 +264,16 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DB\LaConsquistaModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LaConsquistaModel.Context.cs</LastGenOutput>
+      <DependentUpon>LaConsquistaModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="DB\LaConsquistaModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LaConsquistaModel.edmx</DependentUpon>
+      <LastGenOutput>LaConsquistaModel.cs</LastGenOutput>
+    </Content>
     <Content Include="img\archivos-y-carpetas.png" />
     <Content Include="img\comercio-y-compras.png" />
     <Content Include="img\factura.png" />
@@ -232,6 +295,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
