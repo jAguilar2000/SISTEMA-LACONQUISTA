@@ -15,9 +15,15 @@ namespace LaConquista_WF
 {
     public partial class AgregarUsuarios : Form
     {
-        public AgregarUsuarios()
+        public int? id;
+        tbUsuario usuarios = null;
+
+        public AgregarUsuarios(int? id = null)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.id = id;
+            if (id != null) cargarData();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -30,15 +36,43 @@ namespace LaConquista_WF
             using (SistemaLaConquistaEntities model = new SistemaLaConquistaEntities())
             {
                 Utilidades u = new Utilidades();
-                tbUsuario usuarios = new tbUsuario();
+
+                if (id == null)
+                    usuarios = new tbUsuario();
+
+
+
                 usuarios.user_Nombre = TXT_NOMBRE.Text;
                 usuarios.user_Apellido = TXT_APELLIDO.Text;
                 usuarios.user_NombreUsuario = TXT_USUARIO.Text;
                 usuarios.user_FechaCreacion = DateTime.Now;
+
+                 
+
+                if (id == null)
+                {
+                    model.tbUsuario.Add(usuarios);
+                }
+                else
+                {
+                    model.Entry(usuarios).State = System.Data.Entity.EntityState.Modified;
+                }
                 
-                model.tbUsuario.Add(usuarios);
                 model.SaveChanges();
                 this.Hide();
+            }
+        }
+
+
+        private void cargarData()
+        {
+            using (SistemaLaConquistaEntities model = new SistemaLaConquistaEntities())
+            {
+                usuarios = model.tbUsuario.Find(id);
+
+                TXT_NOMBRE.Text = usuarios.user_Nombre;
+                TXT_APELLIDO.Text = usuarios.user_Apellido;
+                TXT_USUARIO.Text = usuarios.user_NombreUsuario;
             }
         }
     }

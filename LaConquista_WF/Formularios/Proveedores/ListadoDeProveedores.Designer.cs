@@ -32,9 +32,11 @@
             // 
             // ListadoDeProveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 348);
+            this.BackColor = System.Drawing.Color.Goldenrod;
+            this.ClientSize = new System.Drawing.Size(651, 428);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ListadoDeProveedores";
             this.Text = "ListadoDeProveedores";
             this.ResumeLayout(false);
