@@ -44,9 +44,10 @@
             this.BTNSALIRUSUARIO.BackColor = System.Drawing.Color.Black;
             this.BTNSALIRUSUARIO.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSALIRUSUARIO.ForeColor = System.Drawing.Color.White;
-            this.BTNSALIRUSUARIO.Location = new System.Drawing.Point(365, 310);
+            this.BTNSALIRUSUARIO.Location = new System.Drawing.Point(487, 382);
+            this.BTNSALIRUSUARIO.Margin = new System.Windows.Forms.Padding(4);
             this.BTNSALIRUSUARIO.Name = "BTNSALIRUSUARIO";
-            this.BTNSALIRUSUARIO.Size = new System.Drawing.Size(100, 32);
+            this.BTNSALIRUSUARIO.Size = new System.Drawing.Size(133, 39);
             this.BTNSALIRUSUARIO.TabIndex = 9;
             this.BTNSALIRUSUARIO.Text = "SALIR";
             this.BTNSALIRUSUARIO.UseVisualStyleBackColor = false;
@@ -56,9 +57,10 @@
             this.BTNINGRESARUSUARIO.BackColor = System.Drawing.Color.Black;
             this.BTNINGRESARUSUARIO.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNINGRESARUSUARIO.ForeColor = System.Drawing.Color.White;
-            this.BTNINGRESARUSUARIO.Location = new System.Drawing.Point(51, 310);
+            this.BTNINGRESARUSUARIO.Location = new System.Drawing.Point(68, 382);
+            this.BTNINGRESARUSUARIO.Margin = new System.Windows.Forms.Padding(4);
             this.BTNINGRESARUSUARIO.Name = "BTNINGRESARUSUARIO";
-            this.BTNINGRESARUSUARIO.Size = new System.Drawing.Size(100, 32);
+            this.BTNINGRESARUSUARIO.Size = new System.Drawing.Size(133, 39);
             this.BTNINGRESARUSUARIO.TabIndex = 8;
             this.BTNINGRESARUSUARIO.Text = "INGRESAR";
             this.BTNINGRESARUSUARIO.UseVisualStyleBackColor = false;
@@ -67,9 +69,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 34);
+            this.label1.Location = new System.Drawing.Point(197, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 20);
+            this.label1.Size = new System.Drawing.Size(257, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "LISTADO DE USUARIOS";
             // 
@@ -81,10 +84,12 @@
             this.Apellido,
             this.Usuario,
             this.Contraseña});
-            this.dataGridViewUSUARIOS.Location = new System.Drawing.Point(36, 98);
+            this.dataGridViewUSUARIOS.Location = new System.Drawing.Point(36, 130);
+            this.dataGridViewUSUARIOS.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewUSUARIOS.Name = "dataGridViewUSUARIOS";
-            this.dataGridViewUSUARIOS.Size = new System.Drawing.Size(438, 190);
+            this.dataGridViewUSUARIOS.Size = new System.Drawing.Size(584, 234);
             this.dataGridViewUSUARIOS.TabIndex = 6;
+            this.dataGridViewUSUARIOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUSUARIOS_CellContentClick);
             // 
             // Nombre
             // 
@@ -108,14 +113,15 @@
             // 
             // ListadoUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(513, 375);
+            this.ClientSize = new System.Drawing.Size(684, 462);
             this.Controls.Add(this.BTNSALIRUSUARIO);
             this.Controls.Add(this.BTNINGRESARUSUARIO);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewUSUARIOS);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListadoUsuarios";
             this.Text = "ListadoUsuarios";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUSUARIOS)).EndInit();
