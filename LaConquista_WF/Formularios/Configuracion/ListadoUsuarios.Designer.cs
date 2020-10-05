@@ -64,6 +64,7 @@
             this.BTNINGRESARUSUARIO.TabIndex = 8;
             this.BTNINGRESARUSUARIO.Text = "INGRESAR";
             this.BTNINGRESARUSUARIO.UseVisualStyleBackColor = false;
+            this.BTNINGRESARUSUARIO.Click += new System.EventHandler(this.BTNINGRESARUSUARIO_Click);
             // 
             // label1
             // 
@@ -84,10 +85,10 @@
             this.Apellido,
             this.Usuario,
             this.Contraseña});
-            this.dataGridViewUSUARIOS.Location = new System.Drawing.Point(36, 130);
+            this.dataGridViewUSUARIOS.Location = new System.Drawing.Point(68, 130);
             this.dataGridViewUSUARIOS.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewUSUARIOS.Name = "dataGridViewUSUARIOS";
-            this.dataGridViewUSUARIOS.Size = new System.Drawing.Size(584, 234);
+            this.dataGridViewUSUARIOS.Size = new System.Drawing.Size(552, 234);
             this.dataGridViewUSUARIOS.TabIndex = 6;
             this.dataGridViewUSUARIOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUSUARIOS_CellContentClick);
             // 
@@ -124,6 +125,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListadoUsuarios";
             this.Text = "ListadoUsuarios";
+            this.Load += new System.EventHandler(this.ListadoUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUSUARIOS)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

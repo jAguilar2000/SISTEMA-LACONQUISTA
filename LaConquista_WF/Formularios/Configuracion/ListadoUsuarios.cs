@@ -20,6 +20,24 @@ namespace LaConquista_WF
 
         private void dataGridViewUSUARIOS_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+
+        private void ListadoUsuarios_Load(object sender, EventArgs e)
+        { 
+            refrescar();
+        }
+
+        private void BTNINGRESARUSUARIO_Click(object sender, EventArgs e)
+        {
+            AgregarUsuarios add = new AgregarUsuarios();
+            add.ShowDialog();
+            refrescar();
+        }
+
+        #region generales
+        private void refrescar()
+        {
             try
             {
                 using (SistemaLaConquistaEntities model = new SistemaLaConquistaEntities())
@@ -30,10 +48,12 @@ namespace LaConquista_WF
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
         }
+        #endregion
+
     }
 }
