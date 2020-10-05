@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.Apellido_cliente = new System.Windows.Forms.Label();
             this.Nombre_cliente = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.txt_Correo = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -222,6 +224,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AgregarCliente";
             this.Text = "AgregarCliente";
+            this.Load += new System.EventHandler(this.AgregarCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,5 +247,6 @@
         private System.Windows.Forms.TextBox txt_Correo;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.ToolTip ttMensaje;
     }
 }

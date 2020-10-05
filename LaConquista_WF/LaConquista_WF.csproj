@@ -188,6 +188,7 @@
     <Compile Include="Formularios\Proveedores\ListadoDeProveedores.Designer.cs">
       <DependentUpon>ListadoDeProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ListClienteViewModels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\Clientes\AgregarCliente.resx">
