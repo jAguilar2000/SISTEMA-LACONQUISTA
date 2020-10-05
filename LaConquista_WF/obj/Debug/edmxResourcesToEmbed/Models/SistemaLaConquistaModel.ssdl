@@ -113,9 +113,9 @@
     <Property Name="user_Nombre" Type="nvarchar" MaxLength="200" />
     <Property Name="user_Apellido" Type="nvarchar" MaxLength="200" />
     <Property Name="user_NombreUsuario" Type="nvarchar" MaxLength="200" />
-    <Property Name="user_Contraseña" Type="varbinary" MaxLength="1" />
     <Property Name="user_Estado" Type="bit" />
     <Property Name="user_FechaCreacion" Type="datetime" />
+    <Property Name="user_Contrasenna" Type="varbinary" MaxLength="8000" />
   </EntityType>
   <Association Name="FK_prove_IdProveedor_tbProducto_prove_IdProveedor">
     <End Role="tbProveedor" Type="Self.tbProveedor" Multiplicity="0..1" />

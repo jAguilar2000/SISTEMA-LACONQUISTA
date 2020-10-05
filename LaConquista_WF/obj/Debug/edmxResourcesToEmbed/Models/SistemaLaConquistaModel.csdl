@@ -1,5 +1,86 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="SistemaLaConquistaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SistemaLaConquistaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbCatalogoProductos" EntityType="SistemaLaConquistaModel.tbCatalogoProductos" />
+    <EntitySet Name="tbCliente" EntityType="SistemaLaConquistaModel.tbCliente" />
+    <EntitySet Name="tbDetallleFactura" EntityType="SistemaLaConquistaModel.tbDetallleFactura" />
+    <EntitySet Name="tbEncabezadoFactura" EntityType="SistemaLaConquistaModel.tbEncabezadoFactura" />
+    <EntitySet Name="tbProducto" EntityType="SistemaLaConquistaModel.tbProducto" />
+    <EntitySet Name="tbProveedor" EntityType="SistemaLaConquistaModel.tbProveedor" />
+    <EntitySet Name="tbUsuario" EntityType="SistemaLaConquistaModel.tbUsuario" />
+    <AssociationSet Name="FK_tbCatalogoProductos_tbProducto_cprod_Id" Association="SistemaLaConquistaModel.FK_tbCatalogoProductos_tbProducto_cprod_Id">
+      <End Role="tbCatalogoProductos" EntitySet="tbCatalogoProductos" />
+      <End Role="tbProducto" EntitySet="tbProducto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbProveedor_tbCatalogoProductos_prove_IdProveedor" Association="SistemaLaConquistaModel.FK_tbProveedor_tbCatalogoProductos_prove_IdProveedor">
+      <End Role="tbProveedor" EntitySet="tbProveedor" />
+      <End Role="tbCatalogoProductos" EntitySet="tbCatalogoProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbCatalogoProductos_UsuarioCrea" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbCatalogoProductos_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbCatalogoProductos" EntitySet="tbCatalogoProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbCatalogoProductos_UsuarioModifica" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbCatalogoProductos_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbCatalogoProductos" EntitySet="tbCatalogoProductos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbCliente_tbEncabezadoFactura_clint_IdCliente" Association="SistemaLaConquistaModel.FK_tbCliente_tbEncabezadoFactura_clint_IdCliente">
+      <End Role="tbCliente" EntitySet="tbCliente" />
+      <End Role="tbEncabezadoFactura" EntitySet="tbEncabezadoFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbCliente_UsuarioCrea" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbCliente_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbCliente" EntitySet="tbCliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbCliente_UsuarioModifica" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbCliente_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbCliente" EntitySet="tbCliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbEncabezadoFactura_tbDetallleFactura_fact_Id" Association="SistemaLaConquistaModel.FK_tbEncabezadoFactura_tbDetallleFactura_fact_Id">
+      <End Role="tbEncabezadoFactura" EntitySet="tbEncabezadoFactura" />
+      <End Role="tbDetallleFactura" EntitySet="tbDetallleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbProducto_tbDetallleFactura_produ_IdProducto" Association="SistemaLaConquistaModel.FK_tbProducto_tbDetallleFactura_produ_IdProducto">
+      <End Role="tbProducto" EntitySet="tbProducto" />
+      <End Role="tbDetallleFactura" EntitySet="tbDetallleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbDetallleFactura_UsuarioCrea" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbDetallleFactura_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbDetallleFactura" EntitySet="tbDetallleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbDetallleFactura_UsuarioModifica" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbDetallleFactura_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbDetallleFactura" EntitySet="tbDetallleFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbEncabezadoFactura_UsuarioCrea" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbEncabezadoFactura_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbEncabezadoFactura" EntitySet="tbEncabezadoFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbEncabezadoFactura_UsuarioModifica" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbEncabezadoFactura_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbEncabezadoFactura" EntitySet="tbEncabezadoFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_prove_IdProveedor_tbProducto_prove_IdProveedor" Association="SistemaLaConquistaModel.FK_prove_IdProveedor_tbProducto_prove_IdProveedor">
+      <End Role="tbProveedor" EntitySet="tbProveedor" />
+      <End Role="tbProducto" EntitySet="tbProducto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbProducto_UsuarioCrea" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbProducto_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbProducto" EntitySet="tbProducto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbProducto_UsuarioModifica" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbProducto_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbProducto" EntitySet="tbProducto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbProveedor_UsuarioCrea" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbProveedor_UsuarioCrea">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbProveedor" EntitySet="tbProveedor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbProveedor_UsuarioModifica" Association="SistemaLaConquistaModel.FK_tbUsuarios_tbProveedor_UsuarioModifica">
+      <End Role="tbUsuario" EntitySet="tbUsuario" />
+      <End Role="tbProveedor" EntitySet="tbProveedor" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="tbCatalogoProductos">
     <Key>
       <PropertyRef Name="cprod_Id" />
@@ -12,10 +93,10 @@
     <Property Name="FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioModifica" Type="Int32" />
     <Property Name="FechaModifica" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="tbProducto" Relationship="Self.FK_tbCatalogoProductos_tbProducto_cprod_Id" FromRole="tbCatalogoProductos" ToRole="tbProducto" />
-    <NavigationProperty Name="tbProveedor" Relationship="Self.FK_tbProveedor_tbCatalogoProductos_prove_IdProveedor" FromRole="tbCatalogoProductos" ToRole="tbProveedor" />
-    <NavigationProperty Name="tbUsuario" Relationship="Self.FK_tbUsuarios_tbCatalogoProductos_UsuarioCrea" FromRole="tbCatalogoProductos" ToRole="tbUsuario" />
-    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK_tbUsuarios_tbCatalogoProductos_UsuarioModifica" FromRole="tbCatalogoProductos" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbProducto" Relationship="SistemaLaConquistaModel.FK_tbCatalogoProductos_tbProducto_cprod_Id" FromRole="tbCatalogoProductos" ToRole="tbProducto" />
+    <NavigationProperty Name="tbProveedor" Relationship="SistemaLaConquistaModel.FK_tbProveedor_tbCatalogoProductos_prove_IdProveedor" FromRole="tbCatalogoProductos" ToRole="tbProveedor" />
+    <NavigationProperty Name="tbUsuario" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbCatalogoProductos_UsuarioCrea" FromRole="tbCatalogoProductos" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbCatalogoProductos_UsuarioModifica" FromRole="tbCatalogoProductos" ToRole="tbUsuario" />
   </EntityType>
   <EntityType Name="tbCliente">
     <Key>
@@ -33,9 +114,9 @@
     <Property Name="FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioModifica" Type="Int32" />
     <Property Name="FechaModifica" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="tbEncabezadoFactura" Relationship="Self.FK_tbCliente_tbEncabezadoFactura_clint_IdCliente" FromRole="tbCliente" ToRole="tbEncabezadoFactura" />
-    <NavigationProperty Name="tbUsuario" Relationship="Self.FK_tbUsuarios_tbCliente_UsuarioCrea" FromRole="tbCliente" ToRole="tbUsuario" />
-    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK_tbUsuarios_tbCliente_UsuarioModifica" FromRole="tbCliente" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbEncabezadoFactura" Relationship="SistemaLaConquistaModel.FK_tbCliente_tbEncabezadoFactura_clint_IdCliente" FromRole="tbCliente" ToRole="tbEncabezadoFactura" />
+    <NavigationProperty Name="tbUsuario" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbCliente_UsuarioCrea" FromRole="tbCliente" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbCliente_UsuarioModifica" FromRole="tbCliente" ToRole="tbUsuario" />
   </EntityType>
   <EntityType Name="tbDetallleFactura">
     <Key>
@@ -56,10 +137,10 @@
     <Property Name="FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioModifica" Type="Int32" />
     <Property Name="FechaModifica" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="tbEncabezadoFactura" Relationship="Self.FK_tbEncabezadoFactura_tbDetallleFactura_fact_Id" FromRole="tbDetallleFactura" ToRole="tbEncabezadoFactura" />
-    <NavigationProperty Name="tbProducto" Relationship="Self.FK_tbProducto_tbDetallleFactura_produ_IdProducto" FromRole="tbDetallleFactura" ToRole="tbProducto" />
-    <NavigationProperty Name="tbUsuario" Relationship="Self.FK_tbUsuarios_tbDetallleFactura_UsuarioCrea" FromRole="tbDetallleFactura" ToRole="tbUsuario" />
-    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK_tbUsuarios_tbDetallleFactura_UsuarioModifica" FromRole="tbDetallleFactura" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbEncabezadoFactura" Relationship="SistemaLaConquistaModel.FK_tbEncabezadoFactura_tbDetallleFactura_fact_Id" FromRole="tbDetallleFactura" ToRole="tbEncabezadoFactura" />
+    <NavigationProperty Name="tbProducto" Relationship="SistemaLaConquistaModel.FK_tbProducto_tbDetallleFactura_produ_IdProducto" FromRole="tbDetallleFactura" ToRole="tbProducto" />
+    <NavigationProperty Name="tbUsuario" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbDetallleFactura_UsuarioCrea" FromRole="tbDetallleFactura" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbDetallleFactura_UsuarioModifica" FromRole="tbDetallleFactura" ToRole="tbUsuario" />
   </EntityType>
   <EntityType Name="tbEncabezadoFactura">
     <Key>
@@ -78,10 +159,10 @@
     <Property Name="FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioModifica" Type="Int32" />
     <Property Name="FechaModifica" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="tbCliente" Relationship="Self.FK_tbCliente_tbEncabezadoFactura_clint_IdCliente" FromRole="tbEncabezadoFactura" ToRole="tbCliente" />
-    <NavigationProperty Name="tbDetallleFactura" Relationship="Self.FK_tbEncabezadoFactura_tbDetallleFactura_fact_Id" FromRole="tbEncabezadoFactura" ToRole="tbDetallleFactura" />
-    <NavigationProperty Name="tbUsuario" Relationship="Self.FK_tbUsuarios_tbEncabezadoFactura_UsuarioCrea" FromRole="tbEncabezadoFactura" ToRole="tbUsuario" />
-    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK_tbUsuarios_tbEncabezadoFactura_UsuarioModifica" FromRole="tbEncabezadoFactura" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbCliente" Relationship="SistemaLaConquistaModel.FK_tbCliente_tbEncabezadoFactura_clint_IdCliente" FromRole="tbEncabezadoFactura" ToRole="tbCliente" />
+    <NavigationProperty Name="tbDetallleFactura" Relationship="SistemaLaConquistaModel.FK_tbEncabezadoFactura_tbDetallleFactura_fact_Id" FromRole="tbEncabezadoFactura" ToRole="tbDetallleFactura" />
+    <NavigationProperty Name="tbUsuario" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbEncabezadoFactura_UsuarioCrea" FromRole="tbEncabezadoFactura" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbEncabezadoFactura_UsuarioModifica" FromRole="tbEncabezadoFactura" ToRole="tbUsuario" />
   </EntityType>
   <EntityType Name="tbProducto">
     <Key>
@@ -103,11 +184,11 @@
     <Property Name="FechaCrea" Type="DateTime" Precision="3" />
     <Property Name="UsuarioModifica" Type="Int32" />
     <Property Name="FechaModifica" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="tbCatalogoProductos" Relationship="Self.FK_tbCatalogoProductos_tbProducto_cprod_Id" FromRole="tbProducto" ToRole="tbCatalogoProductos" />
-    <NavigationProperty Name="tbDetallleFactura" Relationship="Self.FK_tbProducto_tbDetallleFactura_produ_IdProducto" FromRole="tbProducto" ToRole="tbDetallleFactura" />
-    <NavigationProperty Name="tbProveedor" Relationship="Self.FK_prove_IdProveedor_tbProducto_prove_IdProveedor" FromRole="tbProducto" ToRole="tbProveedor" />
-    <NavigationProperty Name="tbUsuario" Relationship="Self.FK_tbUsuarios_tbProducto_UsuarioCrea" FromRole="tbProducto" ToRole="tbUsuario" />
-    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK_tbUsuarios_tbProducto_UsuarioModifica" FromRole="tbProducto" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbCatalogoProductos" Relationship="SistemaLaConquistaModel.FK_tbCatalogoProductos_tbProducto_cprod_Id" FromRole="tbProducto" ToRole="tbCatalogoProductos" />
+    <NavigationProperty Name="tbDetallleFactura" Relationship="SistemaLaConquistaModel.FK_tbProducto_tbDetallleFactura_produ_IdProducto" FromRole="tbProducto" ToRole="tbDetallleFactura" />
+    <NavigationProperty Name="tbProveedor" Relationship="SistemaLaConquistaModel.FK_prove_IdProveedor_tbProducto_prove_IdProveedor" FromRole="tbProducto" ToRole="tbProveedor" />
+    <NavigationProperty Name="tbUsuario" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbProducto_UsuarioCrea" FromRole="tbProducto" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbProducto_UsuarioModifica" FromRole="tbProducto" ToRole="tbUsuario" />
   </EntityType>
   <EntityType Name="tbProveedor">
     <Key>
@@ -124,10 +205,10 @@
     <Property Name="FechaCrea" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UsuarioModifica" Type="Int32" />
     <Property Name="FechaModifica" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="tbCatalogoProductos" Relationship="Self.FK_tbProveedor_tbCatalogoProductos_prove_IdProveedor" FromRole="tbProveedor" ToRole="tbCatalogoProductos" />
-    <NavigationProperty Name="tbProducto" Relationship="Self.FK_prove_IdProveedor_tbProducto_prove_IdProveedor" FromRole="tbProveedor" ToRole="tbProducto" />
-    <NavigationProperty Name="tbUsuario" Relationship="Self.FK_tbUsuarios_tbProveedor_UsuarioCrea" FromRole="tbProveedor" ToRole="tbUsuario" />
-    <NavigationProperty Name="tbUsuario1" Relationship="Self.FK_tbUsuarios_tbProveedor_UsuarioModifica" FromRole="tbProveedor" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbCatalogoProductos" Relationship="SistemaLaConquistaModel.FK_tbProveedor_tbCatalogoProductos_prove_IdProveedor" FromRole="tbProveedor" ToRole="tbCatalogoProductos" />
+    <NavigationProperty Name="tbProducto" Relationship="SistemaLaConquistaModel.FK_prove_IdProveedor_tbProducto_prove_IdProveedor" FromRole="tbProveedor" ToRole="tbProducto" />
+    <NavigationProperty Name="tbUsuario" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbProveedor_UsuarioCrea" FromRole="tbProveedor" ToRole="tbUsuario" />
+    <NavigationProperty Name="tbUsuario1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbProveedor_UsuarioModifica" FromRole="tbProveedor" ToRole="tbUsuario" />
   </EntityType>
   <EntityType Name="tbUsuario">
     <Key>
@@ -137,25 +218,25 @@
     <Property Name="user_Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="user_Apellido" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="user_NombreUsuario" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <Property Name="user_Contraseña" Type="Binary" MaxLength="1" FixedLength="false" />
     <Property Name="user_Estado" Type="Boolean" />
     <Property Name="user_FechaCreacion" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="tbCatalogoProductos" Relationship="Self.FK_tbUsuarios_tbCatalogoProductos_UsuarioCrea" FromRole="tbUsuario" ToRole="tbCatalogoProductos" />
-    <NavigationProperty Name="tbCatalogoProductos1" Relationship="Self.FK_tbUsuarios_tbCatalogoProductos_UsuarioModifica" FromRole="tbUsuario" ToRole="tbCatalogoProductos" />
-    <NavigationProperty Name="tbCliente" Relationship="Self.FK_tbUsuarios_tbCliente_UsuarioCrea" FromRole="tbUsuario" ToRole="tbCliente" />
-    <NavigationProperty Name="tbCliente1" Relationship="Self.FK_tbUsuarios_tbCliente_UsuarioModifica" FromRole="tbUsuario" ToRole="tbCliente" />
-    <NavigationProperty Name="tbDetallleFactura" Relationship="Self.FK_tbUsuarios_tbDetallleFactura_UsuarioCrea" FromRole="tbUsuario" ToRole="tbDetallleFactura" />
-    <NavigationProperty Name="tbDetallleFactura1" Relationship="Self.FK_tbUsuarios_tbDetallleFactura_UsuarioModifica" FromRole="tbUsuario" ToRole="tbDetallleFactura" />
-    <NavigationProperty Name="tbEncabezadoFactura" Relationship="Self.FK_tbUsuarios_tbEncabezadoFactura_UsuarioCrea" FromRole="tbUsuario" ToRole="tbEncabezadoFactura" />
-    <NavigationProperty Name="tbEncabezadoFactura1" Relationship="Self.FK_tbUsuarios_tbEncabezadoFactura_UsuarioModifica" FromRole="tbUsuario" ToRole="tbEncabezadoFactura" />
-    <NavigationProperty Name="tbProducto" Relationship="Self.FK_tbUsuarios_tbProducto_UsuarioCrea" FromRole="tbUsuario" ToRole="tbProducto" />
-    <NavigationProperty Name="tbProducto1" Relationship="Self.FK_tbUsuarios_tbProducto_UsuarioModifica" FromRole="tbUsuario" ToRole="tbProducto" />
-    <NavigationProperty Name="tbProveedor" Relationship="Self.FK_tbUsuarios_tbProveedor_UsuarioCrea" FromRole="tbUsuario" ToRole="tbProveedor" />
-    <NavigationProperty Name="tbProveedor1" Relationship="Self.FK_tbUsuarios_tbProveedor_UsuarioModifica" FromRole="tbUsuario" ToRole="tbProveedor" />
+    <Property Name="user_Contrasenna" Type="Binary" MaxLength="8000" FixedLength="false" />
+    <NavigationProperty Name="tbCatalogoProductos" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbCatalogoProductos_UsuarioCrea" FromRole="tbUsuario" ToRole="tbCatalogoProductos" />
+    <NavigationProperty Name="tbCatalogoProductos1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbCatalogoProductos_UsuarioModifica" FromRole="tbUsuario" ToRole="tbCatalogoProductos" />
+    <NavigationProperty Name="tbCliente" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbCliente_UsuarioCrea" FromRole="tbUsuario" ToRole="tbCliente" />
+    <NavigationProperty Name="tbCliente1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbCliente_UsuarioModifica" FromRole="tbUsuario" ToRole="tbCliente" />
+    <NavigationProperty Name="tbDetallleFactura" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbDetallleFactura_UsuarioCrea" FromRole="tbUsuario" ToRole="tbDetallleFactura" />
+    <NavigationProperty Name="tbDetallleFactura1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbDetallleFactura_UsuarioModifica" FromRole="tbUsuario" ToRole="tbDetallleFactura" />
+    <NavigationProperty Name="tbEncabezadoFactura" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbEncabezadoFactura_UsuarioCrea" FromRole="tbUsuario" ToRole="tbEncabezadoFactura" />
+    <NavigationProperty Name="tbEncabezadoFactura1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbEncabezadoFactura_UsuarioModifica" FromRole="tbUsuario" ToRole="tbEncabezadoFactura" />
+    <NavigationProperty Name="tbProducto" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbProducto_UsuarioCrea" FromRole="tbUsuario" ToRole="tbProducto" />
+    <NavigationProperty Name="tbProducto1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbProducto_UsuarioModifica" FromRole="tbUsuario" ToRole="tbProducto" />
+    <NavigationProperty Name="tbProveedor" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbProveedor_UsuarioCrea" FromRole="tbUsuario" ToRole="tbProveedor" />
+    <NavigationProperty Name="tbProveedor1" Relationship="SistemaLaConquistaModel.FK_tbUsuarios_tbProveedor_UsuarioModifica" FromRole="tbUsuario" ToRole="tbProveedor" />
   </EntityType>
   <Association Name="FK_tbCatalogoProductos_tbProducto_cprod_Id">
-    <End Role="tbCatalogoProductos" Type="Self.tbCatalogoProductos" Multiplicity="0..1" />
-    <End Role="tbProducto" Type="Self.tbProducto" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbCatalogoProductos" Role="tbCatalogoProductos" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbProducto" Role="tbProducto" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbCatalogoProductos">
         <PropertyRef Name="cprod_Id" />
@@ -166,8 +247,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbProveedor_tbCatalogoProductos_prove_IdProveedor">
-    <End Role="tbProveedor" Type="Self.tbProveedor" Multiplicity="0..1" />
-    <End Role="tbCatalogoProductos" Type="Self.tbCatalogoProductos" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbProveedor" Role="tbProveedor" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbCatalogoProductos" Role="tbCatalogoProductos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbProveedor">
         <PropertyRef Name="prove_IdProveedor" />
@@ -178,8 +259,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbCatalogoProductos_UsuarioCrea">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="1" />
-    <End Role="tbCatalogoProductos" Type="Self.tbCatalogoProductos" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="1" />
+    <End Type="SistemaLaConquistaModel.tbCatalogoProductos" Role="tbCatalogoProductos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -190,8 +271,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbCatalogoProductos_UsuarioModifica">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
-    <End Role="tbCatalogoProductos" Type="Self.tbCatalogoProductos" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbCatalogoProductos" Role="tbCatalogoProductos" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -202,8 +283,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbCliente_tbEncabezadoFactura_clint_IdCliente">
-    <End Role="tbCliente" Type="Self.tbCliente" Multiplicity="0..1" />
-    <End Role="tbEncabezadoFactura" Type="Self.tbEncabezadoFactura" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbCliente" Role="tbCliente" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbEncabezadoFactura" Role="tbEncabezadoFactura" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbCliente">
         <PropertyRef Name="clint_IdCliente" />
@@ -214,8 +295,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbCliente_UsuarioCrea">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="1" />
-    <End Role="tbCliente" Type="Self.tbCliente" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="1" />
+    <End Type="SistemaLaConquistaModel.tbCliente" Role="tbCliente" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -226,8 +307,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbCliente_UsuarioModifica">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
-    <End Role="tbCliente" Type="Self.tbCliente" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbCliente" Role="tbCliente" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -238,8 +319,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbEncabezadoFactura_tbDetallleFactura_fact_Id">
-    <End Role="tbEncabezadoFactura" Type="Self.tbEncabezadoFactura" Multiplicity="0..1" />
-    <End Role="tbDetallleFactura" Type="Self.tbDetallleFactura" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbEncabezadoFactura" Role="tbEncabezadoFactura" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbDetallleFactura" Role="tbDetallleFactura" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbEncabezadoFactura">
         <PropertyRef Name="fact_Id" />
@@ -250,8 +331,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbProducto_tbDetallleFactura_produ_IdProducto">
-    <End Role="tbProducto" Type="Self.tbProducto" Multiplicity="0..1" />
-    <End Role="tbDetallleFactura" Type="Self.tbDetallleFactura" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbProducto" Role="tbProducto" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbDetallleFactura" Role="tbDetallleFactura" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbProducto">
         <PropertyRef Name="produ_IdProducto" />
@@ -262,8 +343,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbDetallleFactura_UsuarioCrea">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="1" />
-    <End Role="tbDetallleFactura" Type="Self.tbDetallleFactura" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="1" />
+    <End Type="SistemaLaConquistaModel.tbDetallleFactura" Role="tbDetallleFactura" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -274,8 +355,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbDetallleFactura_UsuarioModifica">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
-    <End Role="tbDetallleFactura" Type="Self.tbDetallleFactura" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbDetallleFactura" Role="tbDetallleFactura" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -286,8 +367,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbEncabezadoFactura_UsuarioCrea">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="1" />
-    <End Role="tbEncabezadoFactura" Type="Self.tbEncabezadoFactura" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="1" />
+    <End Type="SistemaLaConquistaModel.tbEncabezadoFactura" Role="tbEncabezadoFactura" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -298,8 +379,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbEncabezadoFactura_UsuarioModifica">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
-    <End Role="tbEncabezadoFactura" Type="Self.tbEncabezadoFactura" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbEncabezadoFactura" Role="tbEncabezadoFactura" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -310,8 +391,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_prove_IdProveedor_tbProducto_prove_IdProveedor">
-    <End Role="tbProveedor" Type="Self.tbProveedor" Multiplicity="0..1" />
-    <End Role="tbProducto" Type="Self.tbProducto" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbProveedor" Role="tbProveedor" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbProducto" Role="tbProducto" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbProveedor">
         <PropertyRef Name="prove_IdProveedor" />
@@ -322,8 +403,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbProducto_UsuarioCrea">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
-    <End Role="tbProducto" Type="Self.tbProducto" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbProducto" Role="tbProducto" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -334,8 +415,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbProducto_UsuarioModifica">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
-    <End Role="tbProducto" Type="Self.tbProducto" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbProducto" Role="tbProducto" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -346,8 +427,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbProveedor_UsuarioCrea">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="1" />
-    <End Role="tbProveedor" Type="Self.tbProveedor" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="1" />
+    <End Type="SistemaLaConquistaModel.tbProveedor" Role="tbProveedor" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -358,8 +439,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_tbUsuarios_tbProveedor_UsuarioModifica">
-    <End Role="tbUsuario" Type="Self.tbUsuario" Multiplicity="0..1" />
-    <End Role="tbProveedor" Type="Self.tbProveedor" Multiplicity="*" />
+    <End Type="SistemaLaConquistaModel.tbUsuario" Role="tbUsuario" Multiplicity="0..1" />
+    <End Type="SistemaLaConquistaModel.tbProveedor" Role="tbProveedor" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tbUsuario">
         <PropertyRef Name="user_IdUsuario" />
@@ -369,85 +450,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="SistemaLaConquistaEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="tbCatalogoProductos" EntityType="Self.tbCatalogoProductos" />
-    <EntitySet Name="tbCliente" EntityType="Self.tbCliente" />
-    <EntitySet Name="tbDetallleFactura" EntityType="Self.tbDetallleFactura" />
-    <EntitySet Name="tbEncabezadoFactura" EntityType="Self.tbEncabezadoFactura" />
-    <EntitySet Name="tbProducto" EntityType="Self.tbProducto" />
-    <EntitySet Name="tbProveedor" EntityType="Self.tbProveedor" />
-    <EntitySet Name="tbUsuario" EntityType="Self.tbUsuario" />
-    <AssociationSet Name="FK_tbCatalogoProductos_tbProducto_cprod_Id" Association="Self.FK_tbCatalogoProductos_tbProducto_cprod_Id">
-      <End Role="tbCatalogoProductos" EntitySet="tbCatalogoProductos" />
-      <End Role="tbProducto" EntitySet="tbProducto" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbProveedor_tbCatalogoProductos_prove_IdProveedor" Association="Self.FK_tbProveedor_tbCatalogoProductos_prove_IdProveedor">
-      <End Role="tbProveedor" EntitySet="tbProveedor" />
-      <End Role="tbCatalogoProductos" EntitySet="tbCatalogoProductos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbCatalogoProductos_UsuarioCrea" Association="Self.FK_tbUsuarios_tbCatalogoProductos_UsuarioCrea">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbCatalogoProductos" EntitySet="tbCatalogoProductos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbCatalogoProductos_UsuarioModifica" Association="Self.FK_tbUsuarios_tbCatalogoProductos_UsuarioModifica">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbCatalogoProductos" EntitySet="tbCatalogoProductos" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbCliente_tbEncabezadoFactura_clint_IdCliente" Association="Self.FK_tbCliente_tbEncabezadoFactura_clint_IdCliente">
-      <End Role="tbCliente" EntitySet="tbCliente" />
-      <End Role="tbEncabezadoFactura" EntitySet="tbEncabezadoFactura" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbCliente_UsuarioCrea" Association="Self.FK_tbUsuarios_tbCliente_UsuarioCrea">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbCliente" EntitySet="tbCliente" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbCliente_UsuarioModifica" Association="Self.FK_tbUsuarios_tbCliente_UsuarioModifica">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbCliente" EntitySet="tbCliente" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbEncabezadoFactura_tbDetallleFactura_fact_Id" Association="Self.FK_tbEncabezadoFactura_tbDetallleFactura_fact_Id">
-      <End Role="tbEncabezadoFactura" EntitySet="tbEncabezadoFactura" />
-      <End Role="tbDetallleFactura" EntitySet="tbDetallleFactura" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbProducto_tbDetallleFactura_produ_IdProducto" Association="Self.FK_tbProducto_tbDetallleFactura_produ_IdProducto">
-      <End Role="tbProducto" EntitySet="tbProducto" />
-      <End Role="tbDetallleFactura" EntitySet="tbDetallleFactura" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbDetallleFactura_UsuarioCrea" Association="Self.FK_tbUsuarios_tbDetallleFactura_UsuarioCrea">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbDetallleFactura" EntitySet="tbDetallleFactura" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbDetallleFactura_UsuarioModifica" Association="Self.FK_tbUsuarios_tbDetallleFactura_UsuarioModifica">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbDetallleFactura" EntitySet="tbDetallleFactura" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbEncabezadoFactura_UsuarioCrea" Association="Self.FK_tbUsuarios_tbEncabezadoFactura_UsuarioCrea">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbEncabezadoFactura" EntitySet="tbEncabezadoFactura" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbEncabezadoFactura_UsuarioModifica" Association="Self.FK_tbUsuarios_tbEncabezadoFactura_UsuarioModifica">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbEncabezadoFactura" EntitySet="tbEncabezadoFactura" />
-    </AssociationSet>
-    <AssociationSet Name="FK_prove_IdProveedor_tbProducto_prove_IdProveedor" Association="Self.FK_prove_IdProveedor_tbProducto_prove_IdProveedor">
-      <End Role="tbProveedor" EntitySet="tbProveedor" />
-      <End Role="tbProducto" EntitySet="tbProducto" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbProducto_UsuarioCrea" Association="Self.FK_tbUsuarios_tbProducto_UsuarioCrea">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbProducto" EntitySet="tbProducto" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbProducto_UsuarioModifica" Association="Self.FK_tbUsuarios_tbProducto_UsuarioModifica">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbProducto" EntitySet="tbProducto" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbProveedor_UsuarioCrea" Association="Self.FK_tbUsuarios_tbProveedor_UsuarioCrea">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbProveedor" EntitySet="tbProveedor" />
-    </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbProveedor_UsuarioModifica" Association="Self.FK_tbUsuarios_tbProveedor_UsuarioModifica">
-      <End Role="tbUsuario" EntitySet="tbUsuario" />
-      <End Role="tbProveedor" EntitySet="tbProveedor" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>

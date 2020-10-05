@@ -36,5 +36,12 @@ namespace LaConquista_WF
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListadoUsuarios lst = new ListadoUsuarios();
+            this.Hide();
+            lst.Show();
+        }
     }
 }

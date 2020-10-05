@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.TELEFONO = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TXTCONTRASEÑA = new System.Windows.Forms.TextBox();
-            this.TXTUSUARIO = new System.Windows.Forms.TextBox();
+            this.TXT_CONTRASENNA = new System.Windows.Forms.TextBox();
+            this.TXT_USUARIO = new System.Windows.Forms.TextBox();
             this.Apellido_cliente = new System.Windows.Forms.Label();
             this.TXT_APELLIDO = new System.Windows.Forms.TextBox();
             this.BTNINGRESARUSUARIO = new System.Windows.Forms.Button();
@@ -97,27 +97,27 @@
             this.label3.Text = "USUARIO";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // TXTCONTRASEÑA
+            // TXT_CONTRASENNA
             // 
-            this.TXTCONTRASEÑA.BackColor = System.Drawing.SystemColors.Info;
-            this.TXTCONTRASEÑA.Location = new System.Drawing.Point(149, 225);
-            this.TXTCONTRASEÑA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TXTCONTRASEÑA.MaxLength = 50;
-            this.TXTCONTRASEÑA.Multiline = true;
-            this.TXTCONTRASEÑA.Name = "TXTCONTRASEÑA";
-            this.TXTCONTRASEÑA.Size = new System.Drawing.Size(199, 34);
-            this.TXTCONTRASEÑA.TabIndex = 23;
+            this.TXT_CONTRASENNA.BackColor = System.Drawing.SystemColors.Info;
+            this.TXT_CONTRASENNA.Location = new System.Drawing.Point(149, 225);
+            this.TXT_CONTRASENNA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_CONTRASENNA.MaxLength = 50;
+            this.TXT_CONTRASENNA.Multiline = true;
+            this.TXT_CONTRASENNA.Name = "TXT_CONTRASENNA";
+            this.TXT_CONTRASENNA.Size = new System.Drawing.Size(199, 34);
+            this.TXT_CONTRASENNA.TabIndex = 23;
             // 
-            // TXTUSUARIO
+            // TXT_USUARIO
             // 
-            this.TXTUSUARIO.BackColor = System.Drawing.SystemColors.Info;
-            this.TXTUSUARIO.Location = new System.Drawing.Point(149, 170);
-            this.TXTUSUARIO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TXTUSUARIO.MaxLength = 200;
-            this.TXTUSUARIO.Multiline = true;
-            this.TXTUSUARIO.Name = "TXTUSUARIO";
-            this.TXTUSUARIO.Size = new System.Drawing.Size(199, 34);
-            this.TXTUSUARIO.TabIndex = 22;
+            this.TXT_USUARIO.BackColor = System.Drawing.SystemColors.Info;
+            this.TXT_USUARIO.Location = new System.Drawing.Point(149, 170);
+            this.TXT_USUARIO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TXT_USUARIO.MaxLength = 200;
+            this.TXT_USUARIO.Multiline = true;
+            this.TXT_USUARIO.Name = "TXT_USUARIO";
+            this.TXT_USUARIO.Size = new System.Drawing.Size(199, 34);
+            this.TXT_USUARIO.TabIndex = 22;
             // 
             // Apellido_cliente
             // 
@@ -153,6 +153,7 @@
             this.BTNINGRESARUSUARIO.TabIndex = 19;
             this.BTNINGRESARUSUARIO.Text = "INGRESAR";
             this.BTNINGRESARUSUARIO.UseVisualStyleBackColor = false;
+            this.BTNINGRESARUSUARIO.Click += new System.EventHandler(this.BTNINGRESARUSUARIO_Click);
             // 
             // BTNSALIRUSUARIO
             // 
@@ -175,8 +176,8 @@
             this.ClientSize = new System.Drawing.Size(435, 380);
             this.Controls.Add(this.TELEFONO);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TXTCONTRASEÑA);
-            this.Controls.Add(this.TXTUSUARIO);
+            this.Controls.Add(this.TXT_CONTRASENNA);
+            this.Controls.Add(this.TXT_USUARIO);
             this.Controls.Add(this.Apellido_cliente);
             this.Controls.Add(this.TXT_APELLIDO);
             this.Controls.Add(this.BTNINGRESARUSUARIO);
@@ -199,8 +200,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label TELEFONO;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TXTCONTRASEÑA;
-        private System.Windows.Forms.TextBox TXTUSUARIO;
+        private System.Windows.Forms.TextBox TXT_CONTRASENNA;
+        private System.Windows.Forms.TextBox TXT_USUARIO;
         private System.Windows.Forms.Label Apellido_cliente;
         private System.Windows.Forms.TextBox TXT_APELLIDO;
         private System.Windows.Forms.Button BTNINGRESARUSUARIO;
