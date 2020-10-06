@@ -28,15 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.BTNSALIRUSUARIO = new System.Windows.Forms.Button();
             this.BTNINGRESARUSUARIO = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridViewUSUARIOS = new System.Windows.Forms.DataGridView();
+            this.tbUsuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sistemaLaConquistaDataSet = new LaConquista_WF.SistemaLaConquistaDataSet();
+            this.tbUsuarioTableAdapter = new LaConquista_WF.SistemaLaConquistaDataSetTableAdapters.tbUsuarioTableAdapter();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Contraseña = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUSUARIOS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbUsuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaLaConquistaDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // BTNSALIRUSUARIO
@@ -44,9 +53,10 @@
             this.BTNSALIRUSUARIO.BackColor = System.Drawing.Color.Black;
             this.BTNSALIRUSUARIO.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSALIRUSUARIO.ForeColor = System.Drawing.Color.White;
-            this.BTNSALIRUSUARIO.Location = new System.Drawing.Point(365, 310);
+            this.BTNSALIRUSUARIO.Location = new System.Drawing.Point(487, 382);
+            this.BTNSALIRUSUARIO.Margin = new System.Windows.Forms.Padding(4);
             this.BTNSALIRUSUARIO.Name = "BTNSALIRUSUARIO";
-            this.BTNSALIRUSUARIO.Size = new System.Drawing.Size(100, 32);
+            this.BTNSALIRUSUARIO.Size = new System.Drawing.Size(133, 39);
             this.BTNSALIRUSUARIO.TabIndex = 9;
             this.BTNSALIRUSUARIO.Text = "SALIR";
             this.BTNSALIRUSUARIO.UseVisualStyleBackColor = false;
@@ -56,69 +66,144 @@
             this.BTNINGRESARUSUARIO.BackColor = System.Drawing.Color.Black;
             this.BTNINGRESARUSUARIO.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNINGRESARUSUARIO.ForeColor = System.Drawing.Color.White;
-            this.BTNINGRESARUSUARIO.Location = new System.Drawing.Point(51, 310);
+            this.BTNINGRESARUSUARIO.Location = new System.Drawing.Point(68, 382);
+            this.BTNINGRESARUSUARIO.Margin = new System.Windows.Forms.Padding(4);
             this.BTNINGRESARUSUARIO.Name = "BTNINGRESARUSUARIO";
-            this.BTNINGRESARUSUARIO.Size = new System.Drawing.Size(100, 32);
+            this.BTNINGRESARUSUARIO.Size = new System.Drawing.Size(133, 39);
             this.BTNINGRESARUSUARIO.TabIndex = 8;
             this.BTNINGRESARUSUARIO.Text = "INGRESAR";
             this.BTNINGRESARUSUARIO.UseVisualStyleBackColor = false;
+            this.BTNINGRESARUSUARIO.Click += new System.EventHandler(this.BTNINGRESARUSUARIO_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ink Free", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 34);
+            this.label1.Location = new System.Drawing.Point(197, 42);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 20);
+            this.label1.Size = new System.Drawing.Size(257, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "LISTADO DE USUARIOS";
             // 
             // dataGridViewUSUARIOS
             // 
+            this.dataGridViewUSUARIOS.AutoGenerateColumns = false;
             this.dataGridViewUSUARIOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUSUARIOS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Nombre,
             this.Apellido,
             this.Usuario,
-            this.Contraseña});
-            this.dataGridViewUSUARIOS.Location = new System.Drawing.Point(36, 98);
+            this.Creado});
+            this.dataGridViewUSUARIOS.DataSource = this.tbUsuarioBindingSource;
+            this.dataGridViewUSUARIOS.Location = new System.Drawing.Point(68, 70);
+            this.dataGridViewUSUARIOS.MultiSelect = false;
             this.dataGridViewUSUARIOS.Name = "dataGridViewUSUARIOS";
-            this.dataGridViewUSUARIOS.Size = new System.Drawing.Size(438, 190);
-            this.dataGridViewUSUARIOS.TabIndex = 6;
+            this.dataGridViewUSUARIOS.ReadOnly = true;
+            this.dataGridViewUSUARIOS.RowTemplate.Height = 24;
+            this.dataGridViewUSUARIOS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewUSUARIOS.Size = new System.Drawing.Size(552, 292);
+            this.dataGridViewUSUARIOS.TabIndex = 10;
+            this.dataGridViewUSUARIOS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewUSUARIOS_CellContentClick_1);
+            // 
+            // tbUsuarioBindingSource
+            // 
+            this.tbUsuarioBindingSource.DataMember = "tbUsuario";
+            this.tbUsuarioBindingSource.DataSource = this.sistemaLaConquistaDataSet;
+            // 
+            // sistemaLaConquistaDataSet
+            // 
+            this.sistemaLaConquistaDataSet.DataSetName = "SistemaLaConquistaDataSet";
+            this.sistemaLaConquistaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbUsuarioTableAdapter
+            // 
+            this.tbUsuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Black;
+            this.btnEditar.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(209, 382);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(133, 39);
+            this.btnEditar.TabIndex = 11;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(350, 382);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 39);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "user_IdUsuario";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
             // 
             // Nombre
             // 
+            this.Nombre.DataPropertyName = "user_Nombre";
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // Apellido
             // 
+            this.Apellido.DataPropertyName = "user_Apellido";
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
             // 
             // Usuario
             // 
+            this.Usuario.DataPropertyName = "user_NombreUsuario";
             this.Usuario.HeaderText = "Usuario";
             this.Usuario.Name = "Usuario";
+            this.Usuario.ReadOnly = true;
             // 
-            // Contraseña
+            // Creado
             // 
-            this.Contraseña.HeaderText = "Contraseña";
-            this.Contraseña.Name = "Contraseña";
+            this.Creado.DataPropertyName = "user_FechaCreacion";
+            this.Creado.HeaderText = "Creado";
+            this.Creado.Name = "Creado";
+            this.Creado.ReadOnly = true;
             // 
             // ListadoUsuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Goldenrod;
-            this.ClientSize = new System.Drawing.Size(513, 375);
+            this.ClientSize = new System.Drawing.Size(684, 462);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.dataGridViewUSUARIOS);
             this.Controls.Add(this.BTNSALIRUSUARIO);
             this.Controls.Add(this.BTNINGRESARUSUARIO);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridViewUSUARIOS);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListadoUsuarios";
             this.Text = "ListadoUsuarios";
+            this.Load += new System.EventHandler(this.ListadoUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUSUARIOS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbUsuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sistemaLaConquistaDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,9 +215,15 @@
         private System.Windows.Forms.Button BTNINGRESARUSUARIO;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewUSUARIOS;
+        private SistemaLaConquistaDataSet sistemaLaConquistaDataSet;
+        private System.Windows.Forms.BindingSource tbUsuarioBindingSource;
+        private SistemaLaConquistaDataSetTableAdapters.tbUsuarioTableAdapter tbUsuarioTableAdapter;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Contraseña;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Creado;
     }
 }

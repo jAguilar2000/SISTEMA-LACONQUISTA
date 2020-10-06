@@ -15,6 +15,7 @@ namespace LaConquista_WF
         public Login()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -35,6 +36,14 @@ namespace LaConquista_WF
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ListadoUsuarios lst = new ListadoUsuarios();
+            this.Hide();
+            lst.Show();
+            
         }
     }
 }
