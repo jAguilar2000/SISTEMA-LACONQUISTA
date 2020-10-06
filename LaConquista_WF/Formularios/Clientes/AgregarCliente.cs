@@ -55,9 +55,7 @@ namespace LaConquista_WF
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ListadoCliente listadoCliente = new ListadoCliente();
-            listadoCliente.Show();
-            this.Hide();
+            this.Close();
         }
 
         public void LimpiaText()
@@ -99,14 +97,12 @@ namespace LaConquista_WF
                         //ontbCliente.clint_Direccion = txt_Direccion.Text;
                         ontbCliente.clint_Correo = txt_Correo.Text;
                         ontbCliente.clint_Estado = true;
-                        ontbCliente.UsuarioCrea = 5;
-                        ontbCliente.FechaCrea = DateTime.Now;
+                        ontbCliente.UsuarioModifica = 5;
+                        ontbCliente.FechaModifica = DateTime.Now;
                         db.Entry(ontbCliente).State = System.Data.Entity.EntityState.Modified;
                         db.SaveChanges();
                         MessageBox.Show("Datos editados correctamente!", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    
-                    
                     this.Close();
                 }
             }

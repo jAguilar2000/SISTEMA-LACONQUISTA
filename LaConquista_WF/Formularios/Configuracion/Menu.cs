@@ -22,14 +22,14 @@ namespace LaConquista_WF
         {
             ListadoCliente listadoCliente = new ListadoCliente();
             listadoCliente.Show();
-            this.Close(); 
+            this.Hide(); 
         }
 
         private void btnproducto_Click(object sender, EventArgs e)
         {
             ListadoProducto listadoProducto = new ListadoProducto();
             listadoProducto.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnfactura_Click(object sender, EventArgs e)

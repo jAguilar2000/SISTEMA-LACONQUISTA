@@ -12,7 +12,7 @@ namespace LaConquista_WF.Models
         public string Nombre { get; set; }
         public string Identificacion { get; set; }
         public string Telefono { get; set; }
-        public string Direccion { get; set; }
+        //public string Direccion { get; set; }
         public string Correo { get; set; }
     }
 }

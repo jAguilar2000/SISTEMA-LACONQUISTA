@@ -188,9 +188,26 @@
     <Compile Include="Formularios\Proveedores\ListadoDeProveedores.Designer.cs">
       <DependentUpon>ListadoDeProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ListCategoriaViewModels.cs" />
     <Compile Include="Models\ListClienteViewModels.cs" />
+    <Compile Include="Models\ListProductoViewModels.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SistemaLaConquistaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaLaConquistaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaLaConquistaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaLaConquistaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SistemaLaConquistaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SistemaLaConquistaDataSet2.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Formularios\Clientes\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +274,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SistemaLaConquistaDataSet.xsc">
+      <DependentUpon>SistemaLaConquistaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaLaConquistaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaLaConquistaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaLaConquistaDataSet.xss">
+      <DependentUpon>SistemaLaConquistaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaLaConquistaDataSet1.xsc">
+      <DependentUpon>SistemaLaConquistaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaLaConquistaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaLaConquistaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaLaConquistaDataSet1.xss">
+      <DependentUpon>SistemaLaConquistaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaLaConquistaDataSet2.xsc">
+      <DependentUpon>SistemaLaConquistaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="SistemaLaConquistaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SistemaLaConquistaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SistemaLaConquistaDataSet2.xss">
+      <DependentUpon>SistemaLaConquistaDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

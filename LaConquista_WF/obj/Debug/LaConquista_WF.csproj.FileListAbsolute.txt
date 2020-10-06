@@ -19,6 +19,11 @@ C:\Users\DELL\Desktop\LACONQUISTA\LaConquista_WF\LaConquista_WF\obj\Debug\LaConq
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\LaConquista_WF.exe.config
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\LaConquista_WF.exe
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\LaConquista_WF.pdb
+C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\EntityFramework.dll
+C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\EntityFramework.xml
+C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.csprojAssemblyReference.cache
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.AgregarCliente.resources
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.Formularios.Configuracion.Carga.resources
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.Formularios.Factura.ModalCobrar.resources
@@ -35,11 +40,6 @@ C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaC
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.Properties.Resources.resources
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.csproj.GenerateResource.cache
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.csproj.CoreCompileInputs.cache
+C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.csproj.CopyComplete
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.exe
 C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.pdb
-C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\EntityFramework.dll
-C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\EntityFramework.xml
-C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.csproj.CopyComplete
-C:\Users\joshu\Documents\GitHub\SISTEMA-LACONQUISTA\LaConquista_WF\obj\Debug\LaConquista_WF.csprojAssemblyReference.cache

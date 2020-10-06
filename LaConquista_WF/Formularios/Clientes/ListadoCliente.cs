@@ -22,9 +22,9 @@ namespace LaConquista_WF
         private void Cliente_Load(object sender, EventArgs e)
         {
             dataGridView1.Refresh();
-            Display();
+            DisplayCliente();
         }
-        public void Display()
+        public void DisplayCliente()
         {
             using (SistemaLaConquistaEntities db = new SistemaLaConquistaEntities())
             {
@@ -56,7 +56,7 @@ namespace LaConquista_WF
         {
             AgregarCliente agregarCliente = new AgregarCliente();
             agregarCliente.ShowDialog();
-            Display();
+            DisplayCliente();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace LaConquista_WF
             {
                 AgregarCliente agregarCliente = new AgregarCliente(id);
                 agregarCliente.ShowDialog();
-                Display();
+                DisplayCliente();
             }
         }
     }
